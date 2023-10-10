@@ -1,0 +1,7 @@
+void main(){
+    list hello = list_create()
+    list_add(2, hello)
+    int x = list<int>retrieve(hello, 0)
+    print(x)
+    print("\n")
+}

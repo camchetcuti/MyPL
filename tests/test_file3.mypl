@@ -1,0 +1,44 @@
+void main(){
+    list table = list_create()
+    list PID = list_create()
+    list name = list_create()
+    list score = list_create()
+    for (int i = 0; i < 5; i = i + 1){
+        list_add(i, PID)
+    }
+    list_add("Kevin Flynn", name)
+    list_add("TRON", name)
+    list_add("Alan", name)
+    list_add("Sark", name)
+    list_add("Clu", name)
+
+    list_add(98.4, score)
+    list_add(99.9, score)
+    list_add(93.6, score)
+    list_add(84.1, score)
+    list_add(76.3, score)
+
+    list_add(PID, table)
+    list_add(name, table)
+    list_add(score, table)
+
+    for (int j = 0; j < 5; j = j + 1){
+        for (int i = 0; i < 3; i = i + 1){
+            if (i == 0){
+                print("PID: ")
+                print(list<int>retrieve(list<list>retrieve(table, 0), j))
+                print("  ")
+            }
+            elseif (i == 1){
+                print("Name: ")
+                print(list<string>retrieve(list<list>retrieve(table, 1), j))
+                print("  ")
+            }
+            else {
+                print("Score: ")
+                print(list<double>retrieve(list<list>retrieve(table, 2), j))
+                print("\n")
+            }
+        }
+    }
+}

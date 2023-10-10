@@ -1,0 +1,50 @@
+void main(){
+    list hello = list_create()
+    for (int i = 0; i < 6; i = i + 1){
+        list_add(i, hello)
+    }
+    for (int i = 0; i < 6; i = i + 1){
+        int x = list<int>retrieve(hello, i)
+        print(x)
+        print("\n")
+    }
+    print("Number of ints in list: ")
+    print(list_numi(hello))
+    print("\n")
+
+    list goodbye = list_create()
+    for (int i = 0; i < 6; i = i + 1){
+        if (i == 0){
+            list_add(2.2, goodbye)
+        }
+        elseif (i == 2){
+            list_add(2.2, goodbye)
+        }
+        else{
+            list_add(i, goodbye)
+        }
+    }
+    for (int i = 0; i < 6; i = i + 1){
+        if ((i == 0)){
+            int x = list<int>retrieve(goodbye, i)
+            print(x)
+            print("\n")
+        }
+        elseif (i == 2) {
+            double x = list<double>retrieve(goodbye, i)
+            print(x)
+            print("\n")
+        }
+        else {
+            double x = list<double>retrieve(goodbye, i)
+            print(x)
+            print("\n")
+        }
+    }
+    print("Number of ints in list: ")
+    print(list_numi(goodbye))
+    print("\n")
+    print("Number of doubles in list: ")
+    print(list_numd(goodbye))
+    print("\n")
+}
